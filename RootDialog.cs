@@ -28,6 +28,8 @@ namespace FormFlow_BranchBasedOnResponse
 
             var order = await result;
 
+            await context.PostAsync("These are the values I collected in the form:");
+
             await context.PostAsync($"Order Number: {order.OrderNumber}");
 
             await context.PostAsync($"Order Delivery Address: {order.DeliveryAddress}");
